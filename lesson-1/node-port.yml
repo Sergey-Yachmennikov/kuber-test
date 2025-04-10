@@ -5,8 +5,9 @@ metadata:
 spec:
   type: NodePort
   ports:
-    - port: 3000 # port inside pod for communication with other containers
+    - name: http
+      port: 3000 # port inside pod for communication with other containers
       targetPort: 80 # Pod port
-      nodePort: 31200 # Kube-proxy port
+      nodePort: 30007 # Kube-proxy port
   selector:
     components: frontend
