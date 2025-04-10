@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: short-app-port
+spec:
+  type: NodePort
+  ports:
+    - name: http
+      port: 3000 # port inside pod for communication with other containers
+      targetPort: 80 # Pod port
+      nodePort: 30007 # Kube-proxy port
+  selector:
+    components: frontend
