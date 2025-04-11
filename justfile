@@ -1,19 +1,46 @@
-# common
-ip:
-    minikube ip
-show_app_in_browser:
-    minikube service short-app-port
+# common kubectl
 get_all_objects:
     kubectl get all
+get_ingress:
+    kubectl get ingress
 
-# lesson 1
+# common for minikube
+ip:
+    minikube ip
+start:
+    minikube start
+stop:
+    minikube stop
+tunnel:
+    minikube tunnel
+
+show_addons:
+    minikube addons list
+dashboard:
+    minikube dashboard
+
+# common for Kind
+
+
+
+# lesson 1 (pod & node-port)
 start_lesson_1:
     kubectl apply -f ./lesson-1
 delete_lesson_1:
     kubectl delete -f ./lesson-1
 
-# lesson 2
+
+# lesson 2 (deployment & node-port)
 start_lesson_2:
     kubectl apply -f ./lesson-2
 delete_lesson_2:
     kubectl delete -f ./lesson-2
+show_app_in_browser:
+    minikube service short-app-port
+
+
+# lesson 3
+start_lesson_3:
+    kubectl apply -f ./lesson-3
+delete_lesson_3:
+    kubectl delete -f ./lesson-3
