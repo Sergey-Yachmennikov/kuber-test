@@ -18,10 +18,8 @@ show_addons:
     minikube addons list
 dashboard:
     minikube dashboard
-
-# common for Kind
-
-
+show_app_in_browser:
+    minikube service short-app-port
 
 # lesson 1 (pod & node-port)
 start_lesson_1:
@@ -35,8 +33,6 @@ start_lesson_2:
     kubectl apply -f ./lesson-2
 delete_lesson_2:
     kubectl delete -f ./lesson-2
-show_app_in_browser:
-    minikube service short-app-port
 
 
 # lesson 3

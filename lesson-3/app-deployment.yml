@@ -7,7 +7,6 @@ spec:
   selector:
     matchLabels:
       components: frontend
-  # pod description
   template:
     metadata:
       name: short-app
