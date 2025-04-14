@@ -1,8 +1,8 @@
 # common kubectl
 get_all_objects:
-    kubectl get all
+    kubectl get all --show-labels
 get_ingress:
-    kubectl get ingress
+    kubectl get ingress --show-labels
 
 # common for minikube
 ip:
