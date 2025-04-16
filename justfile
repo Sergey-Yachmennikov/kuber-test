@@ -40,3 +40,13 @@ start_lesson_3:
     kubectl apply -f ./lesson-3
 delete_lesson_3:
     kubectl delete -f ./lesson-3
+
+# helm
+start_release:
+    helm install short-service-release short-service
+
+upgrade_release:
+    helm upgrade short-service-release ./short-service
+
+install_debug:
+    helm install --debug --dry-run short-service-release ./short-service

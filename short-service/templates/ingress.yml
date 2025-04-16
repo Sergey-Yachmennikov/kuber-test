@@ -1,0 +1,26 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: short-app-ingress
+  annotations:
+    nginx.ingress.kubernetes.io/rewrite-target: /
+spec:
+  ingressClassName: nginx
+  rules:
+    - host: demo.test
+      http:
+        paths:
+          - path: "/"
+            pathType: Prefix
+            backend:
+              service:
+                name: short-app-cluster-ip
+                port:
+                  number: 80
+          - path: "/api"
+            pathType: Prefix
+            backend:
+              service:
+                name: short-api-cluster-ip
+                port:
+                  number: 3000

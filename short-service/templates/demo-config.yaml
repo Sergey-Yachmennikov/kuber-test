@@ -1,0 +1,8 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: demo-config
+data:
+  key: {{ .Release.Name }}
+  chart: {{ quote .Chart.AppVersion }}
+  date: {{ now | date "2006-01-02" | quote }}
