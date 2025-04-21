@@ -6,6 +6,6 @@ spec:
   type: ClusterIP
   ports:
     - protocol: TCP
-      port: 5433
+      port: 5432
   selector:
     components: postgres
