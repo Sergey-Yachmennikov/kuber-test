@@ -50,3 +50,12 @@ upgrade_release:
 
 install_debug:
     helm install --debug --dry-run short-service-release ./short-service
+
+show_repo:
+    helm repo list
+
+update_repo:
+    helm repo update
+
+show_all_releases:
+    helm ls -A
